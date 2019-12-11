@@ -5,18 +5,24 @@ import org.openqa.selenium.WebDriver;
 public class MasterPage {
 
 	private RestaurantesPage restaurantesPage;
-	private MenuPage menuPage;
+	private CardapioPage cardapioPage;
+	private CarrinhoPage carrinhoPage;
 
 	public MasterPage(WebDriver navegador) {
 		this.restaurantesPage = new RestaurantesPage(navegador);
-		this.menuPage = new MenuPage(navegador);
+		this.cardapioPage = new CardapioPage(navegador);
+		this.carrinhoPage = new CarrinhoPage(navegador);
 	}
 
 	public RestaurantesPage getRestaurantesPage() {
 		return restaurantesPage;
 	}
 
-	public MenuPage getMenuPage() {
-		return menuPage;
+	public CardapioPage getCardapioPage() {
+		return cardapioPage;
+	}
+
+	public CarrinhoPage getCarrinhoPage() {
+		return carrinhoPage;
 	}
 }
