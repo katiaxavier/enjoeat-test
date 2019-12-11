@@ -4,7 +4,6 @@ import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class CarrinhoPage {
 
@@ -21,6 +20,7 @@ public class CarrinhoPage {
 	public String carrinho(Map<String, Integer> map) {
 
 		String resultado = null;
+		
 		for (String produto : map.keySet()) {
 
 			resultado = navegador
@@ -29,5 +29,9 @@ public class CarrinhoPage {
 
 		}
 		return resultado;
+	}
+	
+	public void remover_item() {
+		navegador.findElement(By.xpath("//th[text()=\"(1x) Cup Cake\"]/following-sibling::td[2]/a")).click();
 	}
 }
